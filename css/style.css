@@ -1,0 +1,432 @@
+* {
+  /* outline: 3px solid red; */
+}
+
+/*body {
+    background-color: yellow;
+}*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (min-width: 600px) {
+  /*body {
+      background-color: orange;
+  }*/
+}
+/* ------------------------------------------------- */
+/* ----------------------LAYOUT--------------------- */
+/* ------------------------------------------------- */
+.full-height {
+  min-height: 100vh;
+  /*outline: 3px solid orange;*/
+}
+
+.astronaut {
+  background-color: coral;
+}
+
+.text-page {
+  background-color: seagreen;
+}
+
+/* ------------------------------------------------- */
+/* ----------------------ASTRONAUT------------------ */
+/* ------------------------------------------------- */
+.astronaut {
+  background-image: url("../img/astronaut.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.astronaut .heading-box {
+  border: 4px solid black;
+  width: 10rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  padding: 20px;
+  font-family: "Rubik", sans-serif;
+}
+
+.astronaut .heading-box .text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.astronaut .heading-box .link span {
+  position: relative;
+  left: 0px;
+  transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.astronaut .heading-box .link:hover span {
+  left: 10px;
+}
+
+/*--BUTTON--*/
+.wrapper {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 32px;
+}
+
+.wrapper span {
+  width: 35px;
+  height: 6px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display: block;
+  background-color: black;
+  position: relative;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 99;
+}
+
+.wrapper:hover span:nth-child(2) {
+  right: 4px;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 1000;
+  filter: drop-shadow(0px 3px 0.5px rgba(63, 63, 63, 0.4666666667));
+}
+
+.mobile-nav .underline {
+  text-decoration: none;
+  background-image: linear-gradient(90deg, pink, #D200A2);
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  background-size: 0% 3px;
+  border-radius: 5px;
+  transition:background-size 300ms ease-in-out;
+}
+.mobile-nav .underline:hover { 
+  text-decoration: underline;
+  text-decoration-color: #FF3BDE; 
+}
+
+/* ------------------------------------------------- */
+/* ----------------------TEXTPAGE------------------- */
+/* ------------------------------------------------- */
+.text-page {
+  background: rgba(0, 0, 0, 0.65) url("/img/Stars.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 0 40px;
+  background-blend-mode: darken;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+}
+
+/*.desktopLeft {
+  outline: 3px solid brown;
+}
+
+.desktopRight {
+  outline: 3px solid grey;
+}*/
+
+.text-page .space-ventures {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  font-size: 800%;
+  height: 200px;
+  text-shadow: 2px 2px 10px #000000;
+}
+
+.text-page .space {
+  font-weight: 600;
+  font-size: 85px;
+  position: relative;
+  z-index: 3;
+}
+
+.text-page .ventures {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 105px;
+  opacity: 0.7;
+  position: relative;
+  left: 78px;
+  bottom: 105px;
+}
+
+.text-page .titleTextPage {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 15px 5px;
+}
+.text-page .textStyle {
+  line-height: 1.6;
+  margin: 6px 0;
+  font-weight: 300;
+  font-size: 0.93rem;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: 350;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+  left: 75px;
+  margin: 20px 0;
+}
+
+blockquote::before {
+  content: open-quote;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+  opacity: 50%;
+  font-family: "Times New Roman", Times, serif;
+  position: absolute;
+  left: -15px;
+}
+
+blockquote::after {
+  content: close-quote;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+  opacity: 50%;
+  font-family: "Times New Roman", Times, serif;
+  position: absolute;
+  top:65px
+}
+
+.pinkText {
+  font-size: 0.85rem;
+  color: #D200A2;
+}
+.linkUnderline {
+  text-decoration: underline;
+}
+.arrow{
+  font-size: 1.5rem;
+  position: relative;
+  left: 0px;
+  transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.text-page .arrow:hover {
+  left: 10px;
+}
+
+.gradient-quote {
+  display: none;
+}
+
+/*.title {
+  outline: 3px solid purple;
+}
+
+.yellow {
+  outline: 3px solid yellow;
+}
+
+.red {
+  outline: 3px solid red;
+}
+
+.blue {
+  outline: 3px solid blue;
+}*/
+
+.major-tom {
+  display: none;
+}
+
+/*FOOTER*/
+.cookiePopUp {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color:#002A53;
+  z-index: 4;
+  opacity: 0.96;
+  margin-bottom: -10px;
+}
+
+.cookiePopUp .cookieText .cookieButton .buttonText {
+  display: inline-block;
+  padding: 0 20px;
+}
+.cookiePopUp .cookieText {
+  color: #D200A2;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  font-size: 0.75rem;
+  margin-left: 20px;
+  margin-top: 16px;
+}
+.buttonText {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.cookiePopUp .cookieButton {
+  background-color: #003568;
+  border: 0;
+  padding: 7px 13px;
+  cursor: pointer;
+}
+.cookiePopUp.disable {
+  display: none;
+}
+
+/* ------------------------------------------------- */
+/* ----------------------DESKTOP-------------------- */
+/* ------------------------------------------------- */
+@media screen and (min-width: 800px) {
+  .mobile-nav li:hover .underline {
+    background-size: 100% 7px;
+    color: inherit;
+  }
+
+  .astronaut .heading-box {
+    width: 15rem;
+  }
+  .astronaut .heading-box .link {
+    text-align: right;
+  }
+  .astronaut .heading-box .link span {
+    position: relative;
+    left: 0px;
+    transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .astronaut .heading-box .link:hover span {
+    left: 10px;
+  }
+  .text-page {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+    padding: 0 80px;
+    background: rgba(0, 0, 0, 0.65) url("/img/Stars.jpg");
+    background-size: cover;
+    background-position: 100%;
+    background-blend-mode: darken;
+  }
+
+  .text-page .space-ventures{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+  .text-page .space {
+    font-size: 8vw;
+  }
+  .text-page .ventures {
+    font-size: 9.4vw;
+    left: 1.8vw;
+    bottom: 10vh;
+  }
+
+  .text-page .textStyle {
+    font-size: 1rem;
+  }
+  .text-page .textStyle .pinkText {
+    padding: 0 20px;
+  }
+
+  blockquote {
+    padding:3vh;
+  }
+  blockquote::before {
+    padding: 3vh;
+    top: -0.4vh;
+  }
+  blockquote::after {
+    padding: 0.4vh;
+    top: 8.6vh;
+  }
+
+  .desktopLeft {
+    grid-column: 1/span 2;
+  }
+  .desktopRight {
+    grid-column: 4/span 2;
+  }
+  .gradient-quote {
+    display: block;
+    background: #FF3BDE;
+    background: linear-gradient(to bottom right, #FF3BDE 0%, #C8D9A0 50%, #FF3BDE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.7rem;
+    line-height: 1.2;
+    font-weight: 300;
+    opacity: 0.3;
+    padding: 40px 0;
+    width: 400px;
+    font-style: italic;
+    font-family: 'Rubik', sans-serif;
+  }
+  .major-tom {
+    display: block;
+    width: 100px;
+    height: auto;
+    float: right;
+    transform: rotate(3deg);
+  }
+
+  .cookiePopUp .cookieText{
+    font-size: 0.9rem;
+  }
+  .cookiePopUp .cookieButton:hover {
+    background-color: #002A53;
+  }
+}
+/* ------------------------------------------------- */
+/* ----------------------DARK MODE------------------ */
+/* ------------------------------------------------- */
+/*@media (prefers-color-scheme: dark) {
+    .astronaut .heading-box .link {
+        color: orange;
+    }
+}*//*# sourceMappingURL=style.css.map */
