@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../cv-med-css-husebye"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cv-med-css-husebye"
+	}
+}
